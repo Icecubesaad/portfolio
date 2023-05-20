@@ -729,3 +729,14 @@ textarea.scrollable::-webkit-scrollbar-track {
 .text-container-grid{
   align-self: center;
 }
+@media screen and (max-width:"500px") {
+  .containerGrid{
+display: flex;
+width: 100%;
+flex-direction: column;
+  }
+  .icecube{
+    font-size: 1rem;
+    width: 100%;
+  }
+}
