@@ -1,0 +1,731 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Inter&family=Pathway+Extreme:wght@600&family=Poppins:wght@200&display=swap');
+
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans:wght@500&display=swap');
+html,
+body,
+div,
+span,
+object,
+iframe,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+
+/* =============================================================================
+      My CSS
+      ========================================================================== */
+
+/* ---- base ---- */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #232527;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icecube {
+  font-size: 3rem;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+width: 70%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+#container{
+  margin: 0;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+font-size: 1rem;
+font-weight: 400;
+height: 100vh;
+line-height: 1.5;
+color: #212529;
+text-align: left;
+background-color: black;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.icecube ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    justify-content: space-between;
+    width: 70%;
+    justify-self: center;
+  }
+  
+  .icecube ul li {
+    display: flex;
+    align-items: center;
+    width: auto;
+    justify-content: center;
+    height: 50px;
+    border: 2px solid transparent; /* add transparent border */
+    border-radius: 11px;
+    transition: border-color 0.2s ease-in-out; /* add transition */
+    padding: 0 10px 0 10px;
+    transition: all 300ms;
+  }
+  .icecube ul a {
+    color: orange;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 300ms;
+  }
+  .icecube ul li:hover {
+    border-color: orange; /* change border color on hover */
+    background-color: orange;
+  }
+  .icecube .containerGrid ul a {
+    text-decoration: none;
+  }
+  
+  .icecube .containerGrid ul li.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+  }
+  
+  .icecube .containerGrid ul li.button:hover {
+    background-color: orange;
+    color: black;
+  }
+  
+  
+  
+  
+.github{
+    z-index: 999
+    ;
+}
+.Navbar{
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    z-index: 9999;
+}
+.socials{
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+.gib{
+    margin-right: 30px;
+}
+.linkidn{
+    color: white;
+}
+.gihub{
+    color: white;
+}
+.email{
+    color: white;
+}
+.about{
+    height: 100vh;
+}
+.about h1{
+    text-align: center;
+    color: white;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 80vh;
+    width: 100%;
+}
+.info{
+    margin-top: 20px;
+    align-self: center;
+}
+.info p{
+    color: white;
+    margin-left: 175px;
+    min-width: 530px;
+    font-size: 1.1rem;
+}
+.picture{
+    align-self: center;
+    justify-self: center;
+}
+.skills{
+    height: 100vh;
+}
+.skills h1{
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+}
+.project h1{
+    text-align: center;
+    color: white;
+}
+.main-skills{
+    height: 70vh;
+    background-color: #232527;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+.main-skills-lang{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 50px;
+}
+.html{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.react{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.mongodb{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.vite{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.node{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.express{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+    color: white;
+}
+.main-skills-fw{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 50px;
+}
+.css{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.js{
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+
+    border: 2px solid none;
+    border-radius: 50%;
+}
+.project{
+    height: auto;
+    width: 100%;
+}
+.project1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.project1 p{
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    min-width: 500px;
+    max-width: 700px;
+}
+.button-project1{
+    display: flex;
+    gap: 50px;
+}
+.project3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-top: 50px;
+}
+.project3 p{
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    min-width: 500px;
+    max-width: 700px;
+}
+.button-project3{
+    display: flex;
+    gap: 50px;
+}
+.project2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    align-items: center;
+}
+.project2 p{
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    min-width: 500px;
+    max-width: 700px;
+}
+.project2 h1{
+    margin-top: 20px;
+}
+.project1 h1{
+    margin-top: 20px;
+}
+.project3 h1{
+    margin-top: 20px;
+}
+.button-project2{
+    display: flex;
+    gap: 50px;
+}
+.btn1{
+    width: 150px;
+    height: 50px;
+    border: 2px solid orange;
+    color: orange;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+.btn1 a{
+    color: orange;
+    font-family: "Inter";
+}
+.btn1 a:hover{
+    text-decoration: none;
+    color: orange;
+}
+.btn1:hover{
+    background-color: orange;
+    color: black;
+}
+.btn1:hover a{
+    color:  black;
+}
+.contact{
+    height: auto;
+    padding-bottom: 5vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contact h1{
+    text-align: center;
+    color: white;
+}
+.box-contact{
+    height: auto;
+    width: 60%;
+    padding-bottom: 20px;
+    border: 2px solid orange;
+    margin-top:30px;
+    padding-top: 50px;
+}
+.box-contact form{
+    display: flex;
+    flex-direction: column;
+}
+.box-contact form input{
+    width: 80%;
+    background-color: #232527;
+    border: 2px solid orange;
+    min-height: 50px;
+    margin: auto;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    padding-left: 10px;
+    border-radius: 10px;
+
+}
+.box-contact form textarea{
+  width: 80%;
+    background-color: #232527;
+    border: 2px solid orange;
+    min-height: 150px;
+    margin: auto;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    padding-left: 10px;
+    border-radius: 10px;
+    overflow-y:scroll ;
+}
+.main-grid-project p{
+  font-family: 1rem;
+}
+.box-contact form textarea::placeholder{
+  font-family: "Inter";
+}
+textarea.scrollable {
+  height: 100px; /* Set the desired height */
+  overflow-y: scroll; /* Enable vertical scroll bar */
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: transparent transparent; /* Set the color of the scrollbar thumb and track */
+  resize: vertical; /* Allow vertical resizing */
+  outline: none; /* Remove the default outline */
+}
+
+textarea.scrollable::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+textarea.scrollable::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the color of the scrollbar thumb */
+}
+
+textarea.scrollable::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the color of the scrollbar track */
+}
+
+
+
+/* Styles for the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as desired */
+  background-color: transparent; /* Make the background transparent */
+}
+
+/* Styles for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: orange; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the scrollbar thumb */
+}
+
+/* Styles for the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkorange; /* Color of the scrollbar thumb on hover */
+}
+
+/* Styles for the scrollbar track on hover */
+::-webkit-scrollbar-track:hover {
+  background-color: #e0e0e0; /* Background color of the scrollbar track on hover */
+}
+
+.box-contact h2{
+    color: white;
+    margin-left: 80px;
+}
+#msg{
+    height: 100px;
+}
+.btn-contact{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#typewriter{
+  font-size: 1rem;
+}
+.containerGrid{
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  width: 100%;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+#text{
+  font-size: 1rem;
+
+}
+.text-container-grid{
+  align-self: center;
+}
