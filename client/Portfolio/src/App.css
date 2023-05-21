@@ -1,9 +1,9 @@
 /* =============================================================================
    HTML5 CSS Reset Minified - Eric Meyer
    ========================================================================== */
-   @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Inter&family=Pathway+Extreme:wght@600&family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Inter&family=Pathway+Extreme:wght@600&family=Poppins:wght@200&display=swap");
 
-   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans:wght@500&display=swap");
 html,
 body,
 div,
@@ -73,8 +73,8 @@ video {
   vertical-align: baseline;
   background: transparent;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 body {
   line-height: 1;
@@ -231,22 +231,24 @@ canvas {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-width: 70%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#container{
+#container {
   margin: 0;
-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-font-size: 1rem;
-font-weight: 400;
-height: 100vh;
-line-height: 1.5;
-color: #212529;
-text-align: left;
-background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  height: 100vh;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: black;
 }
 @keyframes typing {
   from {
@@ -268,376 +270,377 @@ background-color: black;
   }
 }
 .icecube ul {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 20px;
-    justify-content: space-between;
-    width: 70%;
-    justify-self: center;
-  }
-  
-  .icecube ul li {
-    display: flex;
-    align-items: center;
-    width: auto;
-    justify-content: center;
-    height: 50px;
-    border: 2px solid transparent; /* add transparent border */
-    border-radius: 11px;
-    transition: border-color 0.2s ease-in-out; /* add transition */
-    padding: 0 10px 0 10px;
-    transition: all 300ms;
-  }
-  .icecube ul a {
-    color: orange;
-    font-size: 0.9rem;
-    font-family: 'Inter', sans-serif;
-    transition: all 300ms;
-  }
-  .icecube ul li:hover {
-    border-color: orange; /* change border color on hover */
-    background-color: orange;
-  }
-  .icecube .containerGrid ul a {
-    text-decoration: none;
-  }
-  
-  .icecube .containerGrid ul li.button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    background-color: black;
-    border-radius: 5px;
-  }
-  
-  .icecube .containerGrid ul li.button:hover {
-    background-color: orange;
-    color: black;
-  }
-  
-  
-  
-  
-.github{
-    z-index: 999
-    ;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  justify-content: space-between;
+  width: 70%;
+  justify-self: center;
 }
-.Navbar{
-    display: flex;
-    position: absolute;
-    top: 0;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
-    z-index: 9999;
-}
-.socials{
-    display: flex;
-    gap: 50px;
-    margin-left: 30px;
-}
-.gib{
-    margin-right: 30px;
-}
-.linkidn{
-    color: white;
-}
-.gihub{
-    color: white;
-}
-.email{
-    color: white;
-}
-.about{
-    height: 100vh;
-}
-.about h1{
-    text-align: center;
-    color: white;
-}
-.main{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: 80vh;
-    width: 100%;
-}
-.info{
-    margin-top: 20px;
-    align-self: center;
-}
-.info p{
-    color: white;
-    margin-left: 175px;
-    min-width: 530px;
-    font-size: 1.1rem;
-}
-.picture{
-    align-self: center;
-    justify-self: center;
-}
-.skills{
-    height: 100vh;
-}
-.skills h1{
-    text-align: center;
-    color: white;
-    padding-top: 30px;
-}
-.project h1{
-    text-align: center;
-    color: white;
-}
-.main-skills{
-    height: 70vh;
-    background-color: #232527;
-    margin-top: 10vh;
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-}
-.main-skills-lang{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    gap: 50px;
-}
-.html{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-}
-.react{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-}
-.mongodb{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-}
-.vite{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-}
-.node{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-}
-.express{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-    color: white;
-}
-.main-skills-fw{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    gap: 50px;
-}
-.css{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    border: 2px solid none;
-    border-radius: 50%;
-}
-.js{
-    background-color: black;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
 
-    border: 2px solid none;
-    border-radius: 50%;
+.icecube ul li {
+  display: flex;
+  align-items: center;
+  width: auto;
+  justify-content: center;
+  height: 50px;
+  border: 2px solid transparent; /* add transparent border */
+  border-radius: 11px;
+  transition: border-color 0.2s ease-in-out; /* add transition */
+  padding: 0 10px 0 10px;
+  transition: all 300ms;
 }
-.project{
-    height: auto;
-    width: 100%;
+.icecube ul a {
+  color: orange;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  transition: all 300ms;
 }
-.project1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    align-items: center;
+.icecube ul li:hover {
+  border-color: orange; /* change border color on hover */
+  background-color: orange;
 }
-.project1 p{
-    color: white;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    min-width: 500px;
-    max-width: 700px;
+.icecube .containerGrid ul a {
+  text-decoration: none;
 }
-.button-project1{
-    display: flex;
-    gap: 50px;
+
+.icecube .containerGrid ul li.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
 }
-.project3{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    margin-top: 50px;
+
+.icecube .containerGrid ul li.button:hover {
+  background-color: orange;
+  color: black;
 }
-.project3 p{
-    color: white;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    min-width: 500px;
-    max-width: 700px;
+
+.github {
+  z-index: 999;
 }
-.button-project3{
-    display: flex;
-    gap: 50px;
+.Navbar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  z-index: 9999;
 }
-.project2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
-    align-items: center;
+.socials {
+  display: flex;
+  gap: 50px;
+  margin-left: 30px;
 }
-.project2 p{
-    color: white;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    min-width: 500px;
-    max-width: 700px;
+.gib {
+  margin-right: 30px;
 }
-.project2 h1{
-    margin-top: 20px;
+.linkidn {
+  color: white;
 }
-.project1 h1{
-    margin-top: 20px;
+.gihub {
+  color: white;
 }
-.project3 h1{
-    margin-top: 20px;
+.email {
+  color: white;
 }
-.button-project2{
-    display: flex;
-    gap: 50px;
+.about {
+  height: 100vh;
+}
+.about h1 {
+  text-align: center;
+  color: white;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+  width: 100%;
+}
+.info {
+  margin-top: 20px;
+  align-self: center;
+}
+.info p {
+  color: white;
+  margin-left: 175px;
+  min-width: 530px;
+  font-size: 1.1rem;
+}
+.picture {
+  align-self: center;
+  justify-self: center;
+}
+.skills {
+  height: 100vh;
+}
+.skills h1 {
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+}
+.project h1 {
+  text-align: center;
+  color: white;
+}
+.main-skills {
+  height: 70vh;
+  background-color: #232527;
+  margin-top: 10vh;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.main-skills-lang {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 50px;
+}
+.html {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.react {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.mongodb {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.vite {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.node {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.express {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+  color: white;
+}
+.main-skills-fw {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 50px;
+}
+.css {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.js {
+  background-color: black;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+
+  border: 2px solid none;
+  border-radius: 50%;
+}
+.project {
+  height: auto;
+  width: 100%;
+}
+.project1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.project1 p {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  min-width: 500px;
+  max-width: 700px;
+  text-align: justify;
+}
+.button-project1 {
+  display: flex;
+  gap: 50px;
+}
+.project3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-top: 50px;
+}
+.project3 p {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  min-width: 500px;
+  max-width: 700px;
+  text-align: justify;
 }
 .btn1{
-    width: 150px;
-    height: 50px;
-    border: 2px solid orange;
-    color: orange;
-    background-color: transparent;
-    transition: all 0.5s;
+  cursor: pointer;
 }
-.btn1 a{
-    color: orange;
-    font-family: "Inter";
+.button-project3 {
+  display: flex;
+  gap: 50px;
 }
-.btn1 a:hover{
-    text-decoration: none;
-    color: orange;
+.project2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  align-items: center;
 }
-.btn1:hover{
-    background-color: orange;
-    color: black;
+.project2 p {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  min-width: 500px;
+  max-width: 700px;
+  text-align: justify;
 }
-.btn1:hover a{
-    color:  black;
+.project2 h1 {
+  margin-top: 20px;
 }
-.contact{
-    height: auto;
-    padding-bottom: 5vh;
-    margin-top: 5vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.project1 h1 {
+  margin-top: 20px;
 }
-.contact h1{
-    text-align: center;
-    color: white;
+.project3 h1 {
+  margin-top: 20px;
 }
-.box-contact{
-    height: auto;
-    width: 60%;
-    padding-bottom: 20px;
-    border: 2px solid orange;
-    margin-top:30px;
-    padding-top: 50px;
+.button-project2 {
+  display: flex;
+  gap: 50px;
 }
-.box-contact form{
-    display: flex;
-    flex-direction: column;
+.btn1 {
+  width: 150px;
+  height: 50px;
+  border: 2px solid orange;
+  color: orange;
+  background-color: transparent;
+  transition: all 0.5s;
 }
-.box-contact form input{
-    width: 80%;
-    background-color: #232527;
-    border: 2px solid orange;
-    min-height: 50px;
-    margin: auto;
-    outline: none;
-    font-size: 1rem;
-    color: white;
-    padding-left: 10px;
-    border-radius: 10px;
-
+.btn1 a {
+  color: orange;
+  font-family: "Inter";
 }
-.box-contact form textarea{
+.btn1 a:hover {
+  text-decoration: none;
+  color: orange;
+}
+.btn1:hover {
+  background-color: orange;
+  color: black;
+}
+.btn1:hover a {
+  color: black;
+}
+.contact {
+  height: auto;
+  padding-bottom: 5vh;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contact h1 {
+  text-align: center;
+  color: white;
+}
+.box-contact {
+  height: auto;
+  width: 60%;
+  padding-bottom: 20px;
+  border: 2px solid orange;
+  margin-top: 30px;
+  padding-top: 50px;
+}
+.box-contact form {
+  display: flex;
+  flex-direction: column;
+}
+.box-contact form input {
   width: 80%;
-    background-color: #232527;
-    border: 2px solid orange;
-    min-height: 150px;
-    margin: auto;
-    outline: none;
-    font-size: 1rem;
-    color: white;
-    padding-left: 10px;
-    border-radius: 10px;
-    overflow-y:scroll ;
+  background-color: #232527;
+  border: 2px solid orange;
+  min-height: 50px;
+  margin: auto;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  padding-left: 10px;
+  border-radius: 10px;
 }
-.main-grid-project p{
+.box-contact form textarea {
+  width: 80%;
+  background-color: #232527;
+  border: 2px solid orange;
+  min-height: 150px;
+  margin: auto;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  padding-left: 10px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.main-grid-project p {
   font-family: 1rem;
 }
-.box-contact form textarea::placeholder{
+.box-contact form textarea::placeholder {
   font-family: "Inter";
 }
 textarea.scrollable {
@@ -661,8 +664,6 @@ textarea.scrollable::-webkit-scrollbar-track {
   background-color: transparent; /* Set the color of the scrollbar track */
 }
 
-
-
 /* Styles for the scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* Adjust the width as desired */
@@ -685,25 +686,25 @@ textarea.scrollable::-webkit-scrollbar-track {
   background-color: #e0e0e0; /* Background color of the scrollbar track on hover */
 }
 
-.box-contact h2{
-    color: white;
-    margin-left: 80px;
+.box-contact h2 {
+  color: white;
+  margin-left: 80px;
 }
-#msg{
-    height: 100px;
+#msg {
+  height: 100px;
 }
-.btn-contact{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.btn-contact {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-#typewriter{
+#typewriter {
   font-size: 1rem;
 }
-.containerGrid{
+.containerGrid {
   display: grid;
-  grid-template-rows: repeat(3,1fr);
+  grid-template-rows: repeat(3, 1fr);
   width: 100%;
 }
 
@@ -722,21 +723,132 @@ textarea.scrollable::-webkit-scrollbar-track {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-#text{
+#text {
   font-size: 1rem;
-
 }
-.text-container-grid{
+.text-container-grid {
   align-self: center;
 }
-@media screen and (max-width:"500px") {
-  .containerGrid{
-display: flex;
-width: 100%;
-flex-direction: column;
+@media screen and (max-width: 500px) {
+  .containerGrid {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
   }
-  .icecube{
+  .icecube {
     font-size: 1rem;
     width: 100%;
   }
+  .containerGrid ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .icecube .containerGrid ul li.button {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    border-radius: 5px;
+  }
+  .about{
+    height: auto;
+  }
+  .skills{
+    height: auto;
+  }
+  .main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .info p{
+  min-width: 0px;
+  margin-left: 0px;
+  width: 91%;
+  font-size: 1rem;
+  text-align: justify;
+  padding-left: 10px;
+  }
+  .picture{
+    display: none;
+  }
+  .skills{
+    width: 100%;
+  }
+  .main-skills{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-container-grid{
+    height: 60px;
+    margin-top: 10px;
+  }
+  .icecube .containerGrid ul li.button:hover{
+    background-color: transparent
+    ;
+    color: orange;
+    border: transparent;
+  }
+  .btn1:hover{
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+  }
+  .btn1:hover a{
+    color: orange;
+  }
+  .main-skills-lang{
+    gap: 0px;
+    width: 100%;
+  }
+  .main-skills-fw{
+    justify-content: center;
+padding-top: 20px;
+gap: 50px;
+display: grid;
+grid-template-columns: repeat(2,1fr)
+  }
+  .button-home{
+    margin-right: 0px;
+    display: none;
+  }
+  .project2 p{
+    font-size: 1rem;
+    min-width: 0px;
+    width: 95%;
+    text-align: justify;
+  }
+  .project3 p{
+    font-size: 1rem;
+    min-width: 0px;
+    width: 95%;
+    text-align: justify;
+  }
+  .project1 p{
+    font-size: 1rem;
+    min-width: 0px;
+    width: 95%;
+    text-align: justify;
+  }
+  .box-contact{
+    width: 95%;
+  }
+  .box-contact form input{
+    width: 90%;
+  }
+  .box-contact form textarea{
+    width: 90%;
+  }
+
+}
+.button-home{
+  margin-right: 20px;
+}
+.box-contact form textarea{
+  padding-left: 10px;
+  padding-top: 10px;
 }

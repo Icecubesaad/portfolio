@@ -1,6 +1,7 @@
 import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import image1 from "./images/FireShot Capture 005 - Vite + React - localhost.png"
 import image2 from "./images/FireShot Capture 001 - Vite + React - localhost.png"
 import image3 from "./images/BLOG.png"
@@ -12,17 +13,94 @@ import image3b from "./images/FireShot Capture 003 - Vite + React - localhost.pn
 import image3c from "./images/BlogSignin.png"
 import image3d from "./images/BlogAdd.png"
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
+
 const Homepage = () => {
-  const [name, setname] = useState();
-  const [email, setemail] = useState();
-  const [desc, setdesc] = useState();
-  const send = async () => {
-    try {
-      const response = await fetch('/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    const values = ["Experienced MERN Stack Developer",
+"Proficient in JavaScript, React, Node.js, and Express.js",
+"Experience with backend development and RESTful APIs",
+"Skilled in working with databases like MongoDB",];
+let currentIndex = 0;
+
+// Function to fade in and out
+function fadeAnimation() {
+  const textElement = document.getElementById("text");
+  const currentValue = values[currentIndex];
+
+  // Fade In
+  textElement.textContent = currentValue;
+  textElement.style.opacity = 1;
+
+  // Delay before fading out
+  setTimeout(() => {
+    // Fade Out
+    textElement.style.opacity = 0;
+
+    // Delay before fading in with new value
+    setTimeout(() => {
+      currentIndex++; // Move to the next element
+      
+      if (currentIndex === values.length) {
+        // Check if reached the end of the array
+        currentIndex = 0; // Start over
+      }
+
+      fadeAnimation(); // Recursively call the function for the next element
+    }, 1000); // Wait for 1 second before fading in with new value
+  }, 3000); // Display each value for 3 seconds
+}
+
+// Start the fade animation
+fadeAnimation();
+  }, []);
+  
+  
+  const [small, setsmall] = useState(false);
+  const [arrow, setarrow] = useState(
+    "50px"
+    );
+    const [styleImage1, setstyleImage1] = useState({"height":"780px","width":"80%"});
+    const [styleImage2, setstyleImage2] = useState({"height" : "500px","width":"80%"});
+    const [styleImage3, setstyleImage3] = useState({"height" : "auto","width":"80%"});
+    useEffect(() => {
+      if(window.innerWidth<500){
+        setsmall(true)
+        setstyleImage1({"height":"200",width:"100%"})
+        setstyleImage2({"height":"250",width:"100%"})
+        setstyleImage3({"height":"400",width:"100%"})
+        setarrow("30px")
+      }
+      else{
+        setsmall(false)
+        setstyleImage1({"height":"780px","width":"80%"})
+        setstyleImage2({"height" : "500px","width":"80%"})
+        setstyleImage3({"height" : "auto","width":"80%"})
+      }
+    }, [windowWidth]);
+    const [name, setname] = useState();
+    const [email, setemail] = useState();
+    const [desc, setdesc] = useState();
+    const send = async () => {
+      try {
+        const response = await fetch('/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
         body: JSON.stringify({ email, name, desc }),
       });
 
@@ -38,11 +116,11 @@ const Homepage = () => {
   const [indexB, setindexB] = useState(0);
   const [index, setindex] = useState(0);
   const RecipeForward = ()=>{
-    if(index == 2){
+    if(index == 3){
       setindex(0)
     }
     else{
-
+      
       setindex(e=>e+1);
     }
   }
@@ -71,6 +149,14 @@ const Homepage = () => {
       setindexB(e=>e-1)
     }
   }
+  const handlers = useSwipeable({
+    onSwipedLeft: () =>{ index == 3 ? setindex(0) :    setindex(prevIndex => prevIndex + 1)},
+    onSwipedRight: () => { index == 0  ? setinde(2)  :  setindex(prevIndex => prevIndex - 1)},
+  });
+  const handlers2 = useSwipeable({
+    onSwipedLeft: () =>{ indexB == 2 ? setindexB(0) :    setindexB(prevIndex => prevIndex + 1)},
+    onSwipedRight: () => { indexB == 0  ? setindexB(2)  :  setindexB(prevIndex => prevIndex - 1)},
+  });
   const [RecipeImages, setRecipeImage] = useState([{
     "img":image2
   },
@@ -91,9 +177,6 @@ const Homepage = () => {
   },
 {
   "img":image3b
-},
-{
-  "img":image3c
 },
 {
   "img":image3d
@@ -126,6 +209,7 @@ const Homepage = () => {
     <div id="container">
       <div className="Navbar">
         <div className="socials">
+          <a style={{textDecoration:"none"}} target='__blank' href='https://github.com/Icecubesaad'>
           <div className="gihub">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,6 +224,7 @@ const Homepage = () => {
               />
             </svg>
           </div>
+          </a>
           <div className="linkidn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -406,7 +491,7 @@ const Homepage = () => {
         <div className="project1">
           <img
             src={image1}
-            height="780px"
+            height={styleImage1}
             width="80%"
             alt=""
             data-aos="flip-left"
@@ -418,14 +503,14 @@ const Homepage = () => {
             account and read it in pdf format. This apps works on self made api.
           </p>
           <div className="button-project1">
-            <button className="btn1"><a href="">Live site</a></button>
-            <button className="btn1"><a href="">Source code</a></button>
+          <a target='__blank' href=""><button className="btn1">Live site</button></a>
+            <a target='__blank'  href="https://github.com/Icecubesaad/Online-book-store"><button className="btn1">Source code</button></a>
           </div>
         </div>
         <div className="project2">
-        <div style={{display:"flex",alignItems:"center"}}>
-        <button onClick={RecipeBack}  style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", marginRight: "20px", zIndex: "9999" }}>
-          <svg width="50px" height="50px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(180)" stroke="#000000">
+        <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <button onClick={RecipeBack} className='button-home'  style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", zIndex: "9999" }}>
+          <svg width={arrow} height={arrow} viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(180)" stroke="#000000">
 
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
@@ -435,8 +520,10 @@ const Homepage = () => {
 
 </svg>
 </button>
-          <img src={RecipeImages[index].img} height="500px" width="80%" alt="" data-aos="flip-left" />
-          <button onClick={RecipeForward}  style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", marginRight: "20px", zIndex: "9999" }}><svg width="50px" height="50px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" stroke="white">
+<div {...handlers} style={{display:"flex",justifyContent:"center",alignItems:"center"}} >
+          <img src={RecipeImages[index].img} height={styleImage2.height} width={styleImage2.width} alt="" data-aos="flip-left" />
+          </div>
+          <button onClick={RecipeForward} className='button-home' style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", zIndex: "9999" }}><svg width={arrow} height={arrow} viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" stroke="white">
 
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
@@ -452,14 +539,14 @@ const Homepage = () => {
           Introducing my MERN stack-powered recipe app: a comprehensive platform that fetches recipes from an open-source API and organizes them into different categories. Users can seamlessly navigate from categories to meals and access detailed recipes. The app features a recipe saving system, profile authentication, and a convenient search bar, allowing users to quickly find their desired recipes and create personalized collections.
           </p>
           <div className="button-project2">
-            <button className="btn1"><a href="">Live site</a></button>
-            <button className="btn1"><a href="">Source code</a></button>
-          </div>
+          <a target='__blank' href=""><button className="btn1">Live site</button></a>
+            <a target='__blank' href="https://github.com/Icecubesaad/Recipe-App"><button className="btn1">Source code</button>
+            </a></div>
         </div>
         <div className="project3" style={{fontFamily:"Inter"}}>
-          <div style={{display:"flex",alignItems:"center"}}>
-          <button onClick={BlogBack}  style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", marginRight: "20px", zIndex: "9999" }}>
-          <svg width="50px" height="50px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(180)" stroke="#000000">
+          <div style={{display:"flex",alignItems:"center",justifyContent:"center"}} >
+          <button onClick={BlogBack} className='button-home'  style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", zIndex: "9999" }}>
+          <svg width={arrow} height={arrow} viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(180)" stroke="#000000">
 
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
@@ -469,8 +556,10 @@ const Homepage = () => {
 
 </svg>
 </button>
-          <img src={BlogApp[indexB].img} height="auto" width="80%" alt="" data-aos="flip-left" />
-          <button onClick={BlogForward}  style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", marginRight: "20px", zIndex: "9999" }}><svg width="50px" height="50px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" stroke="white">
+          <div style={{display:"flex",justifyContent:"center",alignItems:"center"}} {...handlers2}>
+          <img src={BlogApp[indexB].img} height={styleImage3.height} width={styleImage3.width} alt="" data-aos="flip-left" />
+          </div>
+          <button onClick={BlogForward} className='button-home' style={{ backgroundColor: "transparent", border: "none", color: "white", fontSize: "1.3rem", zIndex: "9999" }}><svg width={arrow} height={arrow} viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" stroke="white">
 
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
@@ -486,8 +575,8 @@ const Homepage = () => {
 Introducing my MERN stack-powered blog application: a seamless platform for readers and writers. With user authentication, a liking system, trending and relatable blog algorithms, and categorized tags, this app offers an immersive experience. Users can create personalized author profiles, discover captivating content, engage in meaningful discussions, and express their appreciation through the liking system.
           </p>
           <div className="button-project3">
-            <button className="btn1"><a href="">Live site</a></button>
-            <button className="btn1"><a href="">Source code</a></button>
+          <a target='__blank' href=""><button className="btn1">Live site</button></a>
+          <a target='__blank' href="https://github.com/Icecubesaad/Blog"><button className="btn1">Source code</button></a>
           </div>
         </div>
       </div>
